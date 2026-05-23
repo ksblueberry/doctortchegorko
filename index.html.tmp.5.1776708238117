@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF6F0">
+<title>Доктор Григорий Чегорко — аюрведа и натуральная медицина</title>
+<meta name="description" content="Врач-натуропат с 35-летним опытом. Аюрведические консультации, Панчакарма, очищение и балансировка организма. Приём в Санкт-Петербурге, Гатчине, на Кипре и в Индии. Онлайн — из любой точки мира.">
+<meta property="og:title" content="Доктор Григорий Чегорко — аюрведа и натуральная медицина">
+<meta property="og:description" content="Аюрведические консультации и Панчакарма. 35 лет практики. Работаю там, где есть природа и время на настоящее лечение.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/doctor-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF6F0;
+    --bg-warm: #F5EEE0;
+    --surface: #F1EAE0;
+    --surface-2: #ECE3D5;
+    --text: #2A2218;
+    --text-2: #3B3224;
+    --text-muted: #6E6256;
+    --text-soft: #8A7E6E;
+    --accent: #A65A3A;
+    --accent-dark: #7E3F23;
+    --accent-light: #C17555;
+    --accent-soft: #E9D4C5;
+    --gold: #B08B5A;
+    --border: #E0D5C2;
+    --border-dark: #C8B9A2;
+    --wa: #25D366;
+    --tg: #229ED9;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-lg: 24px;
+    --container: 1200px;
+    --shadow-sm: 0 4px 12px -4px rgba(70, 45, 25, 0.08);
+    --shadow-md: 0 16px 40px -16px rgba(70, 45, 25, 0.18);
+    --shadow-lg: 0 40px 80px -30px rgba(70, 45, 25, 0.28);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  h1, h2, h3, h4 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; letter-spacing: -0.015em; line-height: 1.12; margin: 0 0 0.5em; color: var(--text); }
+  h1 { font-size: clamp(40px, 7vw, 74px); font-weight: 500; }
+  h2 { font-size: clamp(30px, 4.8vw, 50px); }
+  h3 { font-size: clamp(21px, 2.4vw, 28px); }
+  p { margin: 0 0 1em; }
+  a { color: var(--accent-dark); text-decoration: none; transition: color 0.2s; }
+  a:hover { color: var(--accent); }
+  img { max-width: 100%; height: auto; display: block; }
+  section { padding: clamp(72px, 11vw, 130px) 0; position: relative; }
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+  .container-wide { max-width: 1340px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: "Inter", sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 18px; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+  .lead { font-size: clamp(17px, 1.8vw, 20px); color: var(--text-muted); max-width: 64ch; line-height: 1.65; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 15px; line-height: 1; border: 1px solid transparent; cursor: pointer; transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), background-color 0.25s, color 0.25s, box-shadow 0.25s; white-space: nowrap; font-family: inherit; }
+  .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .btn-primary { background: var(--text); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent-dark); color: var(--bg); }
+  .btn-whatsapp { background: var(--wa); color: #fff; }
+  .btn-whatsapp:hover { background: #1EB256; color: #fff; }
+  .btn-telegram { background: var(--tg); color: #fff; }
+  .btn-telegram:hover { background: #1B86B5; color: #fff; }
+  .btn-outline { background: transparent; color: var(--text); border-color: var(--border-dark); }
+  .btn-outline:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .btn svg { width: 18px; height: 18px; }
+
+  /* Header */
+  header.site { position: sticky; top: 0; background: rgba(250, 246, 240, 0.88); backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid rgba(224, 213, 194, 0.6); z-index: 50; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: var(--container); margin: 0 auto; gap: 20px; }
+  .brand { font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px; font-weight: 600; letter-spacing: 0.01em; color: var(--text); line-height: 1.1; }
+  .brand small { display: block; font-family: "Inter", sans-serif; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; margin-top: 3px; }
+  .nav-links { display: flex; gap: 32px; list-style: none; padding: 0; margin: 0; }
+  .nav-links a { font-size: 14.5px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.01em; }
+  .nav-links a:hover { color: var(--text); }
+  @media (max-width: 980px) { .nav-links { display: none; } }
+
+  /* Hero */
+  .hero { padding-top: clamp(60px, 9vw, 110px); padding-bottom: clamp(60px, 9vw, 110px); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; top: -200px; right: -200px; width: 620px; height: 620px; background: radial-gradient(circle, var(--accent-soft) 0%, rgba(233, 212, 197, 0) 70%); pointer-events: none; z-index: 0; opacity: 0.7; }
+  .hero::after { content: ""; position: absolute; bottom: -250px; left: -100px; width: 480px; height: 480px; background: radial-gradient(circle, #EDE0CB 0%, rgba(237, 224, 203, 0) 70%); pointer-events: none; z-index: 0; opacity: 0.5; }
+  .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; align-items: center; position: relative; z-index: 1; }
+  .hero h1 { margin-bottom: 26px; }
+  .hero h1 em { font-style: italic; color: var(--accent-dark); font-weight: 500; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
+  .hero-note { margin-top: 26px; font-size: 14px; color: var(--text-muted); display: inline-flex; align-items: center; gap: 10px; }
+  .hero-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #5AAA6A; box-shadow: 0 0 0 4px rgba(90, 170, 106, 0.18); }
+  .hero-photo { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-2); box-shadow: var(--shadow-lg); }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .hero-photo:hover img { transform: scale(1.03); }
+  .hero-photo-badge { position: absolute; bottom: 20px; left: 20px; background: rgba(250, 246, 240, 0.95); backdrop-filter: blur(10px); padding: 14px 18px; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 14px; }
+  .hero-photo-badge-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: 30px; font-weight: 600; color: var(--accent-dark); line-height: 1; }
+  .hero-photo-badge-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted); line-height: 1.3; }
+  @media (max-width: 980px) { .hero-inner { grid-template-columns: 1fr; gap: 48px; } .hero-photo { max-width: 440px; margin: 0 auto; } }
+
+  /* Trust */
+  .trust { background: var(--surface); padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+  .trust-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(34px, 4.2vw, 48px); color: var(--accent-dark); font-weight: 500; line-height: 1; margin-bottom: 8px; }
+  .trust-label { font-size: 13.5px; color: var(--text-muted); letter-spacing: 0.02em; line-height: 1.4; }
+  @media (max-width: 720px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 72px; align-items: center; }
+  .about-photo-stack { position: relative; aspect-ratio: 3 / 4; }
+  .about-photo-stack img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+  .about-photo-stack .photo-accent { position: absolute; bottom: -30px; right: -30px; width: 42%; aspect-ratio: 3/4; border-radius: var(--radius-sm); overflow: hidden; border: 6px solid var(--bg); box-shadow: var(--shadow-md); }
+  .about-photo-stack .photo-accent img { border-radius: 0; }
+  .credentials { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 16px; }
+  .credentials li { padding-left: 32px; position: relative; color: var(--text-muted); line-height: 1.55; }
+  .credentials li::before { content: ""; position: absolute; left: 0; top: 11px; width: 18px; height: 1px; background: var(--accent); }
+  .credentials strong { color: var(--text); font-weight: 600; }
+  @media (max-width: 980px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } .about-photo-stack { max-width: 440px; order: -1; } .about-photo-stack .photo-accent { right: -20px; bottom: -20px; } }
+
+  /* Explain */
+  .explain { background: var(--surface); }
+  .explain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+  .explain-card { background: var(--bg); padding: 36px 30px; border-radius: var(--radius); border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; }
+  .explain-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .explain-card-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: 36px; color: var(--accent); font-style: italic; line-height: 1; margin-bottom: 14px; opacity: 0.7; }
+  .explain-card h3 { margin-bottom: 12px; }
+  .explain-card p { color: var(--text-muted); margin: 0; font-size: 15.5px; }
+  @media (max-width: 880px) { .explain-grid { grid-template-columns: 1fr; } }
+
+  /* Services */
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 56px; }
+  .service { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 30px 30px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); transition: all 0.25s; }
+  .service:hover { border-color: var(--accent); background: var(--surface); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .service-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 25px; font-weight: 500; margin-bottom: 8px; color: var(--text); line-height: 1.2; }
+  .service-desc { font-size: 15px; color: var(--text-muted); line-height: 1.55; margin: 0; }
+  .service-meta { text-align: right; white-space: nowrap; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+  .service-price { font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px; color: var(--accent-dark); font-weight: 600; }
+  .service-duration { font-size: 13px; color: var(--text-muted); letter-spacing: 0.02em; }
+  @media (max-width: 720px) { .services-grid { grid-template-columns: 1fr; } .service { grid-template-columns: 1fr; gap: 14px; } .service-meta { text-align: left; } }
+
+  /* Gallery strip — procedures */
+  .procedures-gallery { margin-top: 72px; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.1fr; gap: 12px; height: 380px; border-radius: var(--radius); overflow: hidden; }
+  .procedures-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2,0.8,0.2,1); }
+  .procedures-gallery > div { overflow: hidden; }
+  .procedures-gallery > div:hover img { transform: scale(1.07); }
+  @media (max-width: 880px) { .procedures-gallery { grid-template-columns: 1fr 1fr; height: auto; } .procedures-gallery > div { aspect-ratio: 4/5; } }
+
+  /* Panchakarma */
+  .panchakarma-section { background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%); }
+  .panchakarma { background: var(--text); color: var(--bg); border-radius: var(--radius-lg); overflow: hidden; display: grid; grid-template-columns: 1.15fr 1fr; align-items: stretch; box-shadow: var(--shadow-lg); }
+  .panchakarma-content { padding: clamp(40px, 5.5vw, 72px); display: flex; flex-direction: column; justify-content: center; }
+  .panchakarma h2 { color: var(--bg); }
+  .panchakarma .eyebrow { color: var(--accent-soft); }
+  .panchakarma .eyebrow::before { background: var(--accent-soft); }
+  .panchakarma p { color: #D6CEC4; }
+  .panchakarma-stages { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 18px; counter-reset: stages; }
+  .panchakarma-stages li { padding-left: 44px; position: relative; color: #D6CEC4; line-height: 1.55; }
+  .panchakarma-stages li strong { color: #fff; font-weight: 600; display: block; margin-bottom: 4px; font-size: 16.5px; }
+  .panchakarma-stages li::before { counter-increment: stages; content: counter(stages); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--accent-soft); color: var(--accent-soft); font-family: "Cormorant Garamond", Georgia, serif; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+  .panchakarma-cta { margin-top: 36px; }
+  .panchakarma-photo { background-size: cover; background-position: center; min-height: 480px; position: relative; }
+  .panchakarma-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(42, 34, 24, 0.3) 0%, rgba(42, 34, 24, 0) 40%); }
+  @media (max-width: 980px) { .panchakarma { grid-template-columns: 1fr; } .panchakarma-photo { min-height: 340px; order: -1; } }
+
+  /* Reviews */
+  .reviews { background: var(--bg-warm); }
+  .reviews-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 24px; margin-top: 56px; align-items: stretch; }
+  .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; display: flex; flex-direction: column; position: relative; }
+  .review-card::before { content: "\201C"; position: absolute; top: -4px; left: 28px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 120px; color: var(--accent-soft); line-height: 1; pointer-events: none; font-weight: 500; }
+  .review-text { position: relative; z-index: 1; color: var(--text-2); font-size: 15.5px; line-height: 1.7; margin: 0 0 24px; white-space: pre-line; }
+  .review-author { margin-top: auto; display: flex; align-items: center; gap: 14px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .review-author-photo { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--surface); }
+  .review-author-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .review-author-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.2; }
+  .review-author-meta { font-size: 12.5px; color: var(--text-muted); letter-spacing: 0.02em; margin-top: 2px; }
+  .review-card--video { padding: 0; overflow: hidden; background: var(--text); }
+  .review-card--video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .review-video-wrap { position: relative; aspect-ratio: 9 / 16; background: #000; }
+  .review-video-wrap video { width: 100%; height: 100%; object-fit: cover; }
+  .review-video-label { position: absolute; bottom: 16px; left: 16px; right: 16px; display: flex; align-items: center; gap: 10px; background: rgba(250, 246, 240, 0.95); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: var(--radius-sm); pointer-events: none; }
+  .review-video-label-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .review-video-label-icon svg { width: 12px; height: 12px; }
+  .review-video-label-text { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 17px; color: var(--text); line-height: 1.2; }
+  .review-video-label-meta { font-size: 11.5px; color: var(--text-muted); letter-spacing: 0.03em; margin-top: 1px; }
+  @media (max-width: 980px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+  /* Geo */
+  .geo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; }
+  .geo { padding: 30px 30px 32px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); transition: all 0.25s; }
+  .geo:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .geo h3 { font-size: 24px; margin-bottom: 8px; }
+  .geo-tag { display: inline-block; font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+  .geo p { color: var(--text-muted); margin: 0; font-size: 15px; }
+  @media (max-width: 980px) { .geo-grid { grid-template-columns: 1fr; } }
+
+  /* FAQ */
+  .faq-list { margin-top: 48px; max-width: 820px; margin-left: auto; margin-right: auto; }
+  details.faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  details.faq-item[open] { padding-bottom: 28px; }
+  details.faq-item summary { font-family: "Cormorant Garamond", Georgia, serif; font-size: 23px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--text); }
+  details.faq-item summary::-webkit-details-marker { display: none; }
+  details.faq-item summary::after { content: "+"; font-size: 26px; color: var(--accent); font-family: inherit; transition: transform 0.25s; line-height: 1; flex-shrink: 0; }
+  details.faq-item[open] summary::after { content: "−"; }
+  details.faq-item p { margin: 18px 0 0; color: var(--text-muted); font-size: 16px; line-height: 1.65; }
+
+  /* Contact */
+  .contact { background: var(--text); color: var(--bg); }
+  .contact h2 { color: var(--bg); }
+  .contact p { color: #D6CEC4; }
+  .contact .eyebrow { color: var(--accent-soft); }
+  .contact .eyebrow::before { background: var(--accent-soft); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 56px; align-items: start; }
+  .contact-regions { display: grid; gap: 18px; }
+  .contact-region { padding: 22px 24px; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius); background: rgba(255, 255, 255, 0.03); transition: background 0.2s, border-color 0.2s; }
+  .contact-region:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.2); }
+  .contact-region h4 { color: #fff; margin: 0 0 8px; font-size: 18px; font-weight: 600; font-family: "Inter", sans-serif; letter-spacing: 0.02em; }
+  .contact-region .rows { display: grid; gap: 6px; font-size: 15px; color: #D6CEC4; }
+  .contact-region a { color: #fff; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .contact-main-ctas { display: grid; gap: 14px; margin-top: 8px; }
+  .contact-extra { margin-top: 32px; font-size: 14px; color: #BFB5A6; line-height: 1.6; }
+  .contact-extra a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 980px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  /* Footer */
+  footer.site { background: #1a1510; color: #B4AA9A; padding: 40px 0; font-size: 14px; }
+  footer.site .container { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  footer.site a { color: #E0D5C2; }
+  footer.site .disclaimer { max-width: 580px; font-size: 13px; color: #8A8070; }
+
+  /* Mobile CTA */
+  .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 12px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); background: rgba(250, 246, 240, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--border); z-index: 40; gap: 10px; justify-content: center; }
+  .mobile-cta .btn { flex: 1; padding: 14px 16px; font-size: 15px; }
+  @media (max-width: 720px) { .mobile-cta { display: flex; } body { padding-bottom: 88px; } }
+
+  /* Reveal animations */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="#top" class="brand">
+      Доктор Чегорко
+      <small>Аюрведа · натуропатия</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">О враче</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#panchakarma">Панчакарма</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#where">География</a></li>
+      <li><a href="#faq">Вопросы</a></li>
+    </ul>
+    <a href="https://wa.me/358449865851" class="btn btn-primary" target="_blank" rel="noopener">Написать</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="reveal">
+        <span class="eyebrow">Врач-натуропат · 35 лет практики</span>
+        <h1>Аюрведа, которая возвращает здоровье — <em>а не маскирует симптомы</em></h1>
+        <p class="lead">
+          Консультация и индивидуальные программы очищения у Григория Чегорко —
+          врача с классическим медицинским образованием и 30-летним опытом работы
+          в натуральной медицине. Очно в Петербурге, Гатчине, Хельсинки, на Кипре,
+          в Индии или онлайн.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/358449865851" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.9L2 22l4.2-1.6A11 11 0 1 0 20.5 3.5Zm-8.5 17a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-2.5 1 1-2.4-.2-.3a9.4 9.4 0 1 1 6.8 3.1Zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.6 7.6 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5 0-.1 0-.3-.1-.4l-.9-2c-.2-.5-.5-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.8A10.8 10.8 0 0 0 13 17c.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://t.me/doctortche" class="btn btn-telegram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 14.8 9.6 18c.3 0 .5-.1.7-.3l1.7-1.6 3.5 2.5c.6.4 1.1.2 1.2-.6L19 5.3c.2-.8-.3-1.1-.9-.9L2.9 10.5c-.8.3-.8.7-.1.9l3.8 1.2 8.8-5.5c.4-.3.8-.1.5.2"/></svg>
+            Telegram
+          </a>
+          <a href="#services" class="btn btn-outline">Посмотреть услуги</a>
+        </div>
+        <p class="hero-note">Отвечаю лично обычно в течение дня · консультация возможна онлайн</p>
+      </div>
+      <div class="hero-photo reveal">
+        <img src="media/doctor-hero.jpg" alt="Доктор Григорий Чегорко">
+        <div class="hero-photo-badge">
+          <div class="hero-photo-badge-num">35+</div>
+          <div class="hero-photo-badge-label">лет<br>врачебной<br>практики</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" aria-label="Ключевые цифры">
+    <div class="container">
+      <div class="trust-grid">
+        <div><div class="trust-num">35+</div><div class="trust-label">лет врачебной практики</div></div>
+        <div><div class="trust-num">30</div><div class="trust-label">лет в натуральной медицине</div></div>
+        <div><div class="trust-num">5</div><div class="trust-label">стран, где провожу приём</div></div>
+        <div><div class="trust-num">60 мин</div><div class="trust-label">длительность консультации</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-photo-stack reveal">
+        <img src="media/doctor-table.jpg" alt="Григорий Григорьевич Чегорко">
+        <div class="photo-accent">
+          <img src="media/doctor-herbs.jpg" alt="Доктор Чегорко с аюрведическим маслом">
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">О враче</span>
+        <h2>Григорий Григорьевич Чегорко</h2>
+        <p class="lead">
+          Я пришёл в аюрведу не «вместо» медицины, а после неё.
+          Десять лет неотложной помощи, двадцать пять — частной практики,
+          плюс регулярные обучения в Индии. Главный принцип, который
+          я сохраняю со студенческих лет, — «Не навреди».
+        </p>
+        <ul class="credentials">
+          <li><strong>Диплом врача</strong> — Иркутский Государственный Медицинский институт, 1989 г., специальность «лечебное дело»</li>
+          <li><strong>Специализации:</strong> невропатолог-эксперт, врач общей практики (семейный врач)</li>
+          <li><strong>10 лет</strong> работы на неотложной помощи</li>
+          <li><strong>Методы:</strong> Аюрведа, иглотерапия, фитотерапия, гирудотерапия, мануальная и марма-терапия</li>
+          <li><strong>16 лет</strong> возглавляю и помогаю открывать аюрведические центры</li>
+          <li><strong>Регулярно</strong> повышаю квалификацию в Индии</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLAIN -->
+  <section class="explain">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Подход</span>
+        <h2>Почему аюрведа работает там,<br>где бессильны таблетки</h2>
+        <p class="lead">
+          Современная западная медицина хорошо лечит острое и работает с симптомами.
+          Аюрведа — это про другое: про причину, про тонкую настройку и про то, чтобы
+          организм снова начал делать свою работу сам.
+        </p>
+      </div>
+      <div class="explain-grid">
+        <article class="explain-card reveal">
+          <div class="explain-card-num">01</div>
+          <h3>Причина, а не симптом</h3>
+          <p>Мы не глушим боль и не выключаем воспаление на время. Задача — понять, почему тело «сломалось», и вернуть баланс в корне.</p>
+        </article>
+        <article class="explain-card reveal">
+          <div class="explain-card-num">02</div>
+          <h3>Только натуральное</h3>
+          <p>Травяные масла, порошки, топлёное масло, мёд, рис, свежие травы. Никакой химии, никаких побочных эффектов от «лекарства от лекарства».</p>
+        </article>
+        <article class="explain-card reveal">
+          <div class="explain-card-num">03</div>
+          <h3>Индивидуальный подход</h3>
+          <p>Определяем вашу конституцию, степень зашлакованности, слабые системы — и собираем программу лично под вас. Шаблонов нет.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Услуги и цены</span>
+        <h2>С чего начинается лечение</h2>
+        <p class="lead">
+          Всё начинается с консультации — без неё процедуры назначать нельзя. На ней я определю вашу
+          конституцию, найду проблемные зоны и составлю программу.
+        </p>
+      </div>
+      <div class="services-grid">
+        <article class="service reveal"><div><div class="service-title">Консультация врача</div><p class="service-desc">Индивидуальная конституция, степень зашлакованности, рекомендации по питанию, коррекции, дополнительным обследованиям. Очно или онлайн.</p></div><div class="service-meta"><div class="service-price">3 000 ₽</div><div class="service-duration">60 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Абхьянга</div><p class="service-desc">Традиционный масляный массаж всего тела. Убирает сухость, гармонизирует нервную систему, помогает при нарушениях сна, неврозах, остеохондрозе.</p></div><div class="service-meta"><div class="service-price">3 000 ₽</div><div class="service-duration">60 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Широдхара</div><p class="service-desc">Непрерывный поток тёплого травяного масла на лоб. Одна из самых эффективных процедур при тревожности, бессоннице, хроническом стрессе.</p></div><div class="service-meta"><div class="service-price">3 000 ₽</div><div class="service-duration">45 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Марма-терапия</div><p class="service-desc">Воздействие на энергетически активные точки. Снимает блоки, расслабляет мышцы, убирает болевые синдромы, нормализует работу внутренних органов.</p></div><div class="service-meta"><div class="service-price">3 000 ₽</div><div class="service-duration">60 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Удвартана</div><p class="service-desc">Сухой массаж порошками с жиросжигающими травами. Антицеллюлитное и лимфодренажное действие. При ожирении, варикозе, сахарном диабете.</p></div><div class="service-meta"><div class="service-price">3 500 ₽</div><div class="service-duration">60 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Насья</div><p class="service-desc">Выведение слизи и очищение носоглотки. Улучшает дыхание, насыщение крови кислородом, очищает все органы выше ключиц.</p></div><div class="service-meta"><div class="service-price">2 000 ₽</div><div class="service-duration">30 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Аюрведический массаж лица</div><p class="service-desc">Работа со специальными маслами и активными точками лица. Не просто косметология — умиротворение и внутренний баланс.</p></div><div class="service-meta"><div class="service-price">1 800 ₽</div><div class="service-duration">45 мин</div></div></article>
+        <article class="service reveal"><div><div class="service-title">Диагностика по натальной карте</div><p class="service-desc">Анализ с учётом даты, места и времени рождения. Помогает увидеть глубинные причины заболеваний и психологические сценарии.</p></div><div class="service-meta"><div class="service-price">2 000 ₽</div><div class="service-duration">доп. к консультации</div></div></article>
+      </div>
+
+      <div class="procedures-gallery reveal">
+        <div><img src="media/proc-face.jpg" alt="Аюрведический массаж лица" loading="lazy"></div>
+        <div><img src="media/proc-abhyanga.jpg" alt="Абхьянга — масляный массаж" loading="lazy"></div>
+        <div><img src="media/proc-back.jpg" alt="Процедура у доктора" loading="lazy"></div>
+        <div><img src="media/proc-back2.jpg" alt="Марма-терапия" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANCHAKARMA -->
+  <section id="panchakarma" class="panchakarma-section">
+    <div class="container">
+      <div class="panchakarma reveal">
+        <div class="panchakarma-content">
+          <span class="eyebrow">Флагманская программа</span>
+          <h2>Панчакарма — полный курс очищения</h2>
+          <p>
+            Комплекс аюрведических процедур, приводящий в баланс весь организм.
+            Подбирается индивидуально после консультации. Курс 1–3 недели. Именно
+            Панчакарма позволяет справиться с хроническими заболеваниями, аутоиммунными
+            проблемами, дисбалансами нейроэндокринной системы — и даёт ощутимый
+            омолаживающий эффект.
+          </p>
+          <ol class="panchakarma-stages">
+            <li><strong>Консультация и подбор программы</strong>Определяем конституцию, выраженность дисбалансов, составляем индивидуальный план.</li>
+            <li><strong>Подготовительный этап</strong>Тёплые масла, массажи, травяные смеси — размягчают и вытягивают токсины (Ама) из тканей.</li>
+            <li><strong>Основное очищение</strong>Одна или несколько из пяти классических процедур (отсюда и «панча-карма» — «пять действий»).</li>
+            <li><strong>Восстановление и диета</strong>Индивидуальное питание и травы после курса. Именно здесь закрепляется результат.</li>
+          </ol>
+          <a href="https://wa.me/358449865851" class="btn panchakarma-cta" target="_blank" rel="noopener" style="background: var(--accent); color: #fff; align-self: flex-start;">Обсудить курс →</a>
+        </div>
+        <div class="panchakarma-photo" style="background-image: url('media/proc-shirodhara.jpg');" aria-label="Широдхара — один из этапов Панчакармы"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Отзывы</span>
+        <h2>Что говорят пациенты</h2>
+        <p class="lead">Живые истории людей, которые прошли у меня курсы и консультации. Полные тексты и видео — ничего не вырезано.</p>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <p class="review-text">С Григорием Григорьевичем работаем уже три года. Свёл случай — и, как известно, всё случайное не случайно. После первой панчакармы на длительное время восстановила пищеварение и иммунную систему: в зимний период не болела полгода вообще, ни насморка. Хотя вокруг в семье болели прилично и кашляли в лицо — маленький ребёнок был в то время в садике.
+
+Прошлый год был полон стрессов, и серьёзно сбойнули и иммунная, и вегетативная системы, и сердце (последствия стрессов — тахикардия). Григорий Григорьевич стал прямо скорой помощью и дважды буквально «вытаскивал» меня и мою нервную систему из состояния «на грани». Масляные массажи панчакармы приводили меня в баланс. Ощущала физически, как становилось легче и чувствовала себя самой собой. Такое ощущение уже и не помню, когда было — полное равновесие в настроении и в физическом теле.
+
+При общении с Григорием Григорьевичем понимаешь суть себя и своих накопившихся вопросов через понимание своей конституции и причин дисбалансов.
+
+Кроме самой помощи, с Григорием Григорьевичем невероятно приятно общаться. Чувствуешь поддержку и настоящее участие! Благодарю Вселенную, что на моём пути встретился такой удивительный доктор и человек!</p>
+          <div class="review-author">
+            <div class="review-author-photo"><img src="media/natalia-2.jpg" alt="Наталья"></div>
+            <div>
+              <div class="review-author-name">Наталья</div>
+              <div class="review-author-meta">Пациентка · 3 года на курсах</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card review-card--video reveal">
+          <div class="review-video-wrap">
+            <video controls playsinline preload="metadata" poster="media/video-otzyv-1-poster.jpg">
+              <source src="media/video-otzyv-1.mp4" type="video/mp4">
+            </video>
+            <div class="review-video-label">
+              <div class="review-video-label-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div>
+                <div class="review-video-label-text">Видео-отзыв</div>
+                <div class="review-video-label-meta">после курса Панчакармы</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card review-card--video reveal">
+          <div class="review-video-wrap">
+            <video controls playsinline preload="metadata" poster="media/video-otzyv-2-poster.jpg">
+              <source src="media/video-otzyv-2.mp4" type="video/mp4">
+            </video>
+            <div class="review-video-label">
+              <div class="review-video-label-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div>
+                <div class="review-video-label-text">Видео-отзыв</div>
+                <div class="review-video-label-meta">живая история пациента</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO -->
+  <section id="where">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">География</span>
+        <h2>Где принимаю</h2>
+        <p class="lead">
+          Я веду приём не в одном кабинете — курсы Панчакармы требуют времени
+          и правильной среды. Вот где сейчас можно попасть на консультацию и процедуры.
+        </p>
+      </div>
+      <div class="geo-grid">
+        <article class="geo reveal"><span class="geo-tag">Россия</span><h3>Санкт-Петербург</h3><p>Регулярные консультации, процедуры, программы Панчакармы.</p></article>
+        <article class="geo reveal"><span class="geo-tag">Россия · Ленобласть</span><h3>Гатчина</h3><p>Выездные приёмы, полный спектр аюрведических процедур.</p></article>
+        <article class="geo reveal"><span class="geo-tag">Финляндия</span><h3>Хельсинки</h3><p>Приём и курсы Панчакармы для пациентов из Европы.</p></article>
+        <article class="geo reveal"><span class="geo-tag">Кипр</span><h3>Пафос и окрестности</h3><p>Сезонные курсы Панчакармы в небольшом уютном отеле среди банановых плантаций.</p></article>
+        <article class="geo reveal"><span class="geo-tag">Индия · Керала</span><h3>Прародина Аюрведы</h3><p>Большие осенние программы Панчакармы в настоящих индийских клиниках.</p></article>
+        <article class="geo reveal"><span class="geo-tag">Онлайн</span><h3>Консультация где угодно</h3><p>Диагностика, подбор питания, трав, подготовка к будущему курсу.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="explain">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Частые вопросы</span>
+        <h2>То, что обычно спрашивают перед записью</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item"><summary>С чего начать?</summary><p>С консультации — очно или онлайн, 60 минут, 3 000 ₽. На ней я определю вашу индивидуальную конституцию, найду проблемные зоны и скажу, нужна ли вам Панчакарма, отдельные процедуры или только коррекция питания.</p></details>
+        <details class="faq-item"><summary>Можно ли заменить аюрведой обычное лечение?</summary><p>Нет, и никогда к этому не призываю. Аюрведа дополняет современную медицину: работает там, где таблетки только снимают симптом, и укрепляет организм, чтобы он сам справлялся. При острых состояниях всегда нужна аллопатическая помощь.</p></details>
+        <details class="faq-item"><summary>Сколько длится курс Панчакармы?</summary><p>От 7 до 21 дня. Короткий курс подходит для поддержки, полноценное очищение и перезапуск систем требуют 14–21 день. План составляется индивидуально после консультации.</p></details>
+        <details class="faq-item"><summary>Есть ли противопоказания?</summary><p>Да. Острые состояния, хронические заболевания в стадии декомпенсации, беременность. Всё это обсуждается на первой консультации — при необходимости я дам рекомендации по дополнительному обследованию.</p></details>
+        <details class="faq-item"><summary>Онлайн-консультация чем отличается от очной?</summary><p>Очно я вижу больше (пульс, кожа, осанка). Онлайн — это прекрасная диагностика по симптомам, истории, питанию и образу жизни. Для пациентов из других городов и стран онлайн-формат работает отлично.</p></details>
+        <details class="faq-item"><summary>Как оплатить?</summary><p>Очные процедуры — на месте. Онлайн-консультации и бронирование курсов — по договорённости в мессенджерах: выбирайте удобный способ.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Контакты</span>
+        <h2>Напишите — отвечу лично</h2>
+        <p class="lead" style="color:#D6CEC4;">Самый быстрый способ — WhatsApp или Telegram. Пишите в свободной форме: что беспокоит, где находитесь, какой формат удобен.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-main-ctas reveal">
+          <a href="https://wa.me/358449865851" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.6 17.9L2 22l4.2-1.6A11 11 0 1 0 20.5 3.5Zm-8.5 17a9.4 9.4 0 0 1-4.8-1.3l-.3-.2-2.5 1 1-2.4-.2-.3a9.4 9.4 0 1 1 6.8 3.1Zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.6 7.6 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5 0-.1 0-.3-.1-.4l-.9-2c-.2-.5-.5-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.8A10.8 10.8 0 0 0 13 17c.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg>
+            Написать в WhatsApp
+          </a>
+          <a href="https://t.me/doctortche" class="btn btn-telegram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 14.8 9.6 18c.3 0 .5-.1.7-.3l1.7-1.6 3.5 2.5c.6.4 1.1.2 1.2-.6L19 5.3c.2-.8-.3-1.1-.9-.9L2.9 10.5c-.8.3-.8.7-.1.9l3.8 1.2 8.8-5.5c.4-.3.8-.1.5.2"/></svg>
+            Написать в Telegram
+          </a>
+          <a href="mailto:info@ayurdoctor.eu" class="btn btn-outline" style="color: var(--bg); border-color: rgba(255,255,255,0.25);">info@ayurdoctor.eu</a>
+          <p class="contact-extra">
+            Подписаться на канал доктора —
+            <a href="https://t.me/dr_chegorko" target="_blank" rel="noopener">@dr_chegorko</a>
+            <br>(новости о курсах, полезное про аюрведу, расписания)
+          </p>
+        </div>
+        <div class="contact-regions reveal">
+          <div class="contact-region"><h4>Россия</h4><div class="rows"><div>+7 (921) 869-69-10 — общий</div><div>Санкт-Петербург · Гатчина</div><div><a href="mailto:doctortchegorko@mail.ru">doctortchegorko@mail.ru</a></div></div></div>
+          <div class="contact-region"><h4>Финляндия и Европа</h4><div class="rows"><div>+358 44 986 5851 — WhatsApp</div><div>Хельсинки</div></div></div>
+          <div class="contact-region"><h4>Кипр</h4><div class="rows"><div>+357 95 73 4498 — бронирование курсов</div><div>Пафос и окрестности</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div>© Доктор Чегорко · Аюрведа и натуральная медицина</div>
+    <div class="disclaimer">
+      Информация на сайте не заменяет консультации врача. При острых состояниях обращайтесь за экстренной медицинской помощью.
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="navigation" aria-label="Быстрый контакт">
+  <a href="https://wa.me/358449865851" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://t.me/doctortche" class="btn btn-telegram" target="_blank" rel="noopener">Telegram</a>
+</div>
+
+<script>
+  // Reveal on scroll
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
